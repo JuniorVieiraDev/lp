@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 html,
@@ -12,6 +11,7 @@ body {
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 :root {
@@ -31,17 +31,14 @@ body {
 
 .cor-1 {
     color: var(--cor-1);
-    font-weight: bold;
 }
 
 .cor-2 {
     color: var(--cor-2);
-    font-weight: bold;
 }
 
 .cor-3 {
     color: white;
-    font-weight: bold;
 }
 
 .bold {
@@ -74,8 +71,8 @@ p {
 
 .navegacao {
     background: linear-gradient(to bottom, #074160, #031f2e);
-    border-top: 10px solid var(--cor-2);
-    border-bottom: 10px solid var(--cor-2);
+    border-top: 14px solid var(--cor-2);
+    border-bottom: 7px solid var(--cor-2);
 }
 
 .navbar {
@@ -85,7 +82,7 @@ p {
     color: white;
 }
 
-.logo a img{
+.logo a img {
     width: 100%;
     max-width: 220px;
 }
@@ -109,13 +106,14 @@ p {
     content: "|";
     margin-left: 10px;
     color: var(--cor-2);
-  }
+}
 
 .nav-links li a {
     color: var(--cor-2);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 19px;
     transition: .3s;
+    letter-spacing: 2px;
 }
 
 .nav-links li a:hover {
@@ -123,6 +121,7 @@ p {
 }
 
 /*nav*/
+/*
 
 header {
     background-image: url("../imgs/encontro.jpg");
@@ -142,6 +141,29 @@ header>.container>div {
     border-radius: 10px;
     margin-bottom: 20px;
 }
+*/
+
+.hero {
+    position: relative;
+    height: calc(100vh - 124px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.bg-video {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
 
 .cta-link {
     position: fixed;
@@ -149,15 +171,15 @@ header>.container>div {
     background-color: var(--cor-2);
     color: var(--cor-1);
     padding: 20px 30px;
-    border-radius: 6px;
     text-align: center;
     transition: .5s;
-    bottom: 10px;
-    right: 10px;
+    bottom: 0;
+    right: 0;
 }
 
 .cta-link:hover {
-    background-color: var(--cor-5);
+    scale: 1.1;
+    box-shadow: 0 0 15px 8px white;
 }
 
 .cta-link strong {
@@ -171,21 +193,43 @@ header>.container>div {
 
 /*header*/
 
+.find {
+    background: linear-gradient(to bottom, #074160, #031f2e);
+    text-align: center;
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+}
+
+.find h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+
+    background: linear-gradient(to bottom, #ffffff, #031f2e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+    color: transparent;
+}
+
+
+/*find*/
+
 .what-is {
     background-image: url('../imgs/pelos.webp');
     background-size: cover;
     background-position: center center;
-    padding: 0 20px 40px 20px;
+    padding: 0 20px 0 20px;
+    color: var(--cor-1);
 }
 
-.what-txt img  {
+.what-txt img {
     width: 100%;
     max-width: 400px;
     margin-bottom: 20px;
 }
 
 .what-is .container {
-    background-color: rgb(0, 255, 221, 0.4);
+    background-color: rgb(0, 255, 221, 0.5);
     padding: 40px 20px;
 }
 
@@ -193,7 +237,7 @@ header>.container>div {
     margin-left: 80px;
 }
 
-.what-is > .container > p {
+.what-is>.container>p {
     font-size: clamp(20px, 5vw, 28px);
 }
 
@@ -240,7 +284,7 @@ header>.container>div {
     gap: 10px 50px;
 }
 
-.how > .container > div {
+.how>.container>div {
     margin-left: 20px;
 }
 
@@ -258,8 +302,9 @@ header>.container>div {
 }
 
 .fs18 {
-    font-size: 17px;
+    margin-top: 10px;
     margin-bottom: 15px;
+    margin-left: 33px;
 }
 
 
@@ -269,6 +314,7 @@ header>.container>div {
     display: flex;
     justify-content: space-around;
     gap: 20px;
+    color: var(--cor-1);
 }
 
 .who-txt {
@@ -332,6 +378,8 @@ header>.container>div {
 
 .waitlist h2 {
     margin-bottom: 30px;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    letter-spacing: 3px;
 }
 
 .waitlist p {
@@ -408,16 +456,18 @@ textarea {
     text-align: center;
 }
 
+.cta img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
 .cta .container {
     background-color: rgb(0, 255, 221, 0.7);
 }
 
-.cta h2 {
-    margin-bottom: 40px;
-}
-
 .cta p {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .destaque {
@@ -427,7 +477,7 @@ textarea {
 /*cta*/
 
 .sociais {
-    bottom: 160px;
+    bottom: 40%;
     right: 10px;
     position: fixed;
     display: flex;
@@ -454,6 +504,10 @@ textarea {
 
 footer {
     text-align: center;
+}
+
+footer a {
+    color: var(--cor-1);
 }
 
 /*footer*/
@@ -511,7 +565,7 @@ footer {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .hamburger {
         display: block;
     }
@@ -554,9 +608,9 @@ footer {
 
     .nav-links li:not(:last-child)::after {
         content: none;
-      }
+    }
 
-      .cta-link {
+    .cta-link {
         padding: 12px 20px;
     }
 
@@ -566,14 +620,5 @@ footer {
 
     .cta-link span {
         font-size: 16px;
-    }
-
-    .sociais {
-        bottom: 120px;
-        right: 10px;
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
     }
 }
