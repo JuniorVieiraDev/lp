@@ -121,48 +121,29 @@ p {
 }
 
 /*nav*/
-/*
-
-header {
-    background-image: url("../imgs/encontro.jpg");
-    height: calc(100vh - 124px);
-    background-size: cover;
-    background-position: left center;
-    display: flex;
-    align-items: center;
-    border-bottom: 10px solid white;
-}
-
-header>.container>div {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 30px 10px;
-    max-width: 800px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-*/
 
 .hero {
     position: relative;
-    height: calc(100vh - 124px);
+    height: calc(72vh - 124px);
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
+    background-color: var(--cor-1);
 }
 
 .bg-video {
     position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    object-position:  center;
+    z-index: 99;
 }
 
 .cta-link {
@@ -173,13 +154,14 @@ header>.container>div {
     padding: 20px 30px;
     text-align: center;
     transition: .5s;
-    bottom: 0;
+    bottom: 22vh;
     right: 0;
+    z-index: 999;
 }
 
 .cta-link:hover {
     scale: 1.1;
-    box-shadow: 0 0 15px 8px white;
+    box-shadow: 0 0 15px 8px #095781;
 }
 
 .cta-link strong {
@@ -202,13 +184,7 @@ header>.container>div {
 
 .find h2 {
     font-size: clamp(2rem, 5vw, 4rem);
-
-    background: linear-gradient(to bottom, #ffffff, #031f2e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    background-clip: text;
-    color: transparent;
+    color: rgba(245, 245, 245, 0.6);
 }
 
 
@@ -218,7 +194,7 @@ header>.container>div {
     background-image: url('../imgs/pelos.webp');
     background-size: cover;
     background-position: center center;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
     color: var(--cor-1);
 }
 
@@ -284,8 +260,8 @@ header>.container>div {
     gap: 10px 50px;
 }
 
-.how>.container>div {
-    margin-left: 20px;
+.how > .container > div {
+    padding: 0 10px;
 }
 
 .how img {
@@ -321,6 +297,7 @@ header>.container>div {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .who-img {
@@ -374,6 +351,7 @@ header>.container>div {
     background-size: cover;
     color: var(--cor-2);
     border-bottom: 10px solid white;
+    padding: 0 10px;
 }
 
 .waitlist h2 {
@@ -388,7 +366,7 @@ header>.container>div {
 
 .waitlist-txt {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -396,37 +374,15 @@ header>.container>div {
     background-color: rgba(7, 65, 96, 0.5);
 }
 
+.waitlist .fs18 {
+    margin-left: 0;
+}
+
 .form-container {
-    max-width: 600px;
+    width: 100%;
     margin: 60px auto;
     text-align: center;
-    /* escurecer imagem de fundo */
     border-radius: 10px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-input,
-select,
-textarea {
-    padding: 15px;
-    font-size: 16px;
-    border-radius: 25px;
-    border: none;
-    outline: none;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-textarea {
-    resize: none;
-    height: 150px;
-    border-radius: 20px;
 }
 
 .btn {
@@ -451,7 +407,7 @@ textarea {
 .cta {
     background-image: url('../imgs/pena.webp');
     background-size: cover;
-    padding: 40px 5px;
+    padding: 40px 10px;
     color: var(--cor-1);
     text-align: center;
 }
@@ -483,6 +439,7 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    z-index: 999;
 }
 
 .sociais a {
@@ -539,6 +496,18 @@ footer a {
         left: 100px;
         bottom: 100px;
     }
+
+    .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:  center;
+    z-index: 99;
+}
 }
 
 @media (max-width: 1000px) {
@@ -572,7 +541,7 @@ footer a {
 
     .nav-links {
         position: absolute;
-        top: 130px;
+        top: 140px;
         left: 0;
         width: 100%;
         flex-direction: column;
