@@ -123,27 +123,10 @@ p {
 /*nav*/
 
 .hero {
-    position: relative;
     height: calc(72vh - 124px);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    background-color: var(--cor-1);
-}
-
-.bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: 100%;
-    object-fit: cover;
-    object-position:  center;
-    z-index: 99;
+    background-size: cover;
+  background-position: top;
+  transition: background-image 0.5s ease-in-out;
 }
 
 .cta-link {
