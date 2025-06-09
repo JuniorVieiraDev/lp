@@ -30,7 +30,7 @@ const hero = document.querySelector('.hero');
   setInterval(() => {
     current = (current + 1) % backgrounds.length;
     setBackground();
-  }, 2000);
+  }, 5000);
 
   // Detecta mudança de tamanho da tela
   window.addEventListener('resize', setBackground);
