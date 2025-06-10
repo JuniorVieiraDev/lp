@@ -125,8 +125,8 @@ p {
 .hero {
     height: calc(72vh - 124px);
     background-size: cover;
-  background-position: top;
-  transition: background-image 0.5s ease-in-out;
+    background-position: top;
+    transition: background-image 0.5s ease-in-out;
 }
 
 .cta-link {
@@ -243,7 +243,7 @@ p {
     gap: 10px 50px;
 }
 
-.how > .container > div {
+.how>.container>div {
     padding: 0 10px;
 }
 
@@ -481,16 +481,16 @@ footer a {
     }
 
     .bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position:  center;
-    z-index: 99;
-}
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 99;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -508,6 +508,18 @@ footer a {
 
     .who-img-3 {
         top: -80px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cta-link {
+        padding: 12px 20px;
+        bottom: 35%;
+    }
+
+    .sociais {
+        bottom: 50%;
     }
 }
 
@@ -560,10 +572,6 @@ footer a {
 
     .nav-links li:not(:last-child)::after {
         content: none;
-    }
-
-    .cta-link {
-        padding: 12px 20px;
     }
 
     .cta-link strong {
